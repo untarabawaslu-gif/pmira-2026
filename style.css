@@ -1,0 +1,621 @@
+/* =================================================================
+   BAWASRA UNTARA — Sistem Pengaduan PEMIRA 2026
+   Token desain: navy institusional + aksen amber, motif "stempel resmi"
+   ================================================================= */
+
+:root {
+  --navy-900: #0B1F3A;
+  --navy-700: #14315C;
+  --navy-600: #1D4079;
+  --paper: #F5F6F9;
+  --paper-card: #FFFFFF;
+  --amber-500: #D98E2B;
+  --amber-100: #FBE8C8;
+  --ink: #1C2430;
+  --ink-soft: #5B6577;
+  --line: #DCE0E7;
+  --green-600: #1F7A4D;
+  --green-100: #E2F3E9;
+  --red-700: #B3261E;
+  --red-100: #FBE6E4;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  --max-width: 800px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--navy-600); }
+
+/* ---------------- Header ---------------- */
+
+.site-header {
+  background: var(--paper-card);
+  border-bottom: 3px solid var(--navy-900);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text { line-height: 1.25; }
+
+.brand-eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.brand-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy-900);
+}
+
+/* ---------------- Masthead ---------------- */
+
+.masthead {
+  background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  color: #fff;
+  padding: 48px 20px 56px;
+}
+
+.masthead-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.eyebrow-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(217, 142, 43, 0.18);
+  border: 1px solid var(--amber-500);
+  color: var(--amber-100);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.lede-greeting {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: var(--amber-100);
+}
+
+.lede {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 640px;
+}
+
+.assurance-pills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.assurance-pills li {
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+.assurance-pills li::before {
+  content: "✓ ";
+  color: var(--amber-500);
+  font-weight: 700;
+}
+
+/* ---------------- Info section ---------------- */
+
+.info-section {
+  padding: 28px 20px 0;
+}
+
+.info-grid {
+  max-width: var(--max-width);
+  margin: -28px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.info-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px -16px rgba(11, 31, 58, 0.25);
+}
+
+.info-card-eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--amber-500);
+  font-weight: 700;
+}
+
+.info-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+  color: var(--navy-900);
+}
+
+.mechanism-list {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.mechanism-list li { margin-bottom: 6px; }
+
+.info-card-seal p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ---------------- Form section ---------------- */
+
+.form-section {
+  padding: 36px 20px 10px;
+}
+
+#pengaduan-form {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+fieldset {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px;
+  margin: 0;
+}
+
+legend {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--navy-900);
+  padding: 0 4px 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--navy-900);
+  color: #fff;
+  padding: 4px 9px;
+  border-radius: 6px;
+}
+
+.fieldset-note {
+  margin: 0 0 18px;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.field { margin-bottom: 16px; }
+.field:last-child { margin-bottom: 0; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.req { color: var(--red-700); }
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 1px;
+}
+
+textarea { resize: vertical; font-family: var(--font-body); }
+
+.field-hint {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+/* File upload */
+
+.file-drop-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1.5px dashed var(--navy-600);
+  border-radius: var(--radius-sm);
+  padding: 18px 14px;
+  cursor: pointer;
+  background: rgba(29, 64, 121, 0.04);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-700);
+  transition: background 0.15s ease;
+}
+
+.file-drop-label:hover { background: rgba(29, 64, 121, 0.08); }
+
+.file-drop-label input[type="file"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.82rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 7px 11px;
+}
+
+.file-list li button {
+  border: none;
+  background: none;
+  color: var(--red-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+/* Radio & checkbox */
+
+.radio-group-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 18px;
+}
+
+.radio-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 14px;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.checkbox-field input { margin-top: 3px; }
+.checkbox-field:last-of-type { margin-bottom: 20px; }
+
+/* Errors & buttons */
+
+.form-error {
+  background: var(--red-100);
+  border: 1px solid var(--red-700);
+  color: var(--red-700);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  margin: 0 0 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.96rem;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--amber-500);
+  color: var(--navy-900);
+  width: 100%;
+}
+
+.btn-primary:hover { opacity: 0.92; }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-secondary {
+  background: var(--navy-900);
+  color: #fff;
+}
+
+/* ---------------- Confirmation / receipt ---------------- */
+
+.confirmation-section {
+  padding: 48px 20px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.receipt-card {
+  max-width: 460px;
+  width: 100%;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 16px 40px -20px rgba(11,31,58,0.3);
+  animation: receipt-in 0.5s ease;
+}
+
+@keyframes receipt-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.seal {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 2px solid var(--navy-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--navy-700);
+  position: relative;
+  transform: rotate(-7deg);
+  animation: stamp-in 0.45s cubic-bezier(.2,1.4,.4,1);
+}
+
+.seal::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed var(--amber-500);
+  border-radius: 50%;
+}
+
+@keyframes stamp-in {
+  from { opacity: 0; transform: scale(1.6) rotate(-7deg); }
+  to { opacity: 1; transform: scale(1) rotate(-7deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receipt-card, .seal { animation: none; }
+}
+
+.receipt-card h2 {
+  font-family: var(--font-display);
+  color: var(--navy-900);
+  margin: 0 0 18px;
+  font-size: 1.3rem;
+}
+
+.receipt-label {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.report-id {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin: 4px 0 14px;
+  word-break: break-all;
+}
+
+.report-time {
+  font-size: 0.95rem;
+  margin: 4px 0 18px;
+}
+
+.receipt-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  background: var(--navy-900);
+  color: rgba(255,255,255,0.85);
+  padding: 28px 20px 36px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.site-footer p { margin: 4px 0; }
+.site-footer a { color: var(--amber-100); }
+
+.footer-disclaimer {
+  max-width: 560px;
+  margin: 14px auto 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ---------------- Loading overlay ---------------- */
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,31,58,0.78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #fff;
+  z-index: 50;
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: var(--amber-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation-duration: 1.6s; }
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 720px) {
+  .info-grid { grid-template-columns: 1fr; margin-top: -18px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .masthead { padding: 36px 18px 64px; }
+  fieldset { padding: 20px 18px; }
+}
+
+@media (max-width: 480px) {
+  .brand-name { font-size: 0.92rem; }
+  .logo-img { height: 36px; }
+}
